@@ -60,7 +60,8 @@ data =
 	{
 		img   = image,  -- frame image
 		t     = delay,  -- frame delay
-		ox,oy = ox,oy,  -- frame offset
+		ox    = ox,     -- frame x offset
+		oy    = oy,     -- frame y offset
 	}
 	...
 }
