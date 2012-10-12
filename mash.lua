@@ -50,7 +50,7 @@ function a:resume()
 end
 
 function a:stop()
-	selt.status = 'stopped'
+	self.status = 'stopped'
 	self.frame,self.t,self.direction = 1,0,1
 end
 
