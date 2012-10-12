@@ -3,6 +3,8 @@ INTRODUCTION
 ===================
 
 	Mash is an animation library for LOVE. It groups images together to create an animation object. The animation object is used to draw your animation. Simple right?
+	
+	Example can be found in the Downloads section.
 
 ===================
 THE FUNCTIONS
