@@ -52,11 +52,25 @@ data = mash.newData(sequence,callback)
 -- @return delay,ox,oy --> The associated delay,ox,oy for frame i. Must return non-nil.
 delay,ox,oy = callback(i,sequence)
 
+The format of the animation data is as follows:
+
+data = 
+{
+	[1] = -- frame number 1
+	{
+		img   = image,  -- frame image
+		t     = delay,  -- frame delay
+		ox,oy = ox,oy,  -- frame offset
+	}
+	...
+}
+
+Note that ALL values (img,t,ox,oy) are required for each frame.
+
 -- @param data      --> The animation data table
 -- @param mode      --> Optional animation mode: loop,bounce,once
 -- @return animObj  --> animation object to be used for drawing
 animObj = mash.new(data,mode)
-	
 	
 	ANIMATION METHODS
 	===================
@@ -80,3 +94,14 @@ animObj:update(dt)
 -- Draw the animation. Parameters are like "love.graphics.draw".
 -- Note that the ox and oy parameters are summed with each frame's offsets.
 animObj:draw(x, y, r, sx, sy, ox, oy, kx, ky)
+
+===================
+SUMMARY
+===================
+
+Three types of tables:
+	* sequence(s)
+	* animation data
+	* animation object
+
+The most important function is mash.new. You can of course set your own animation data without mash.newData. You may want to do this when you want duplicate images on different frames.
