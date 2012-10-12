@@ -1,3 +1,5 @@
+-- v0.1
+
 --[[
 Copyright (c) 2012 Minh Ngo
 
